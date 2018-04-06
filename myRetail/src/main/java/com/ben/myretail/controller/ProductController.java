@@ -47,6 +47,9 @@ public class ProductController {
         if (id != product.getId()) {
             throw new UpdateIntegrityException("IDs are mismatched");
         }
+        if (productRepository.existsById(id) == false) {
+            throw new UpdateIntegrityException("unknown ID");
+        }
         return productRepository.save(product);
     }
 }
