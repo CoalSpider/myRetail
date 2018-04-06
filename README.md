@@ -1,7 +1,7 @@
 # myRetail
-Case Study myRetail for target job opportunity
+Case Study myRetail for target job opportunity (tested on windows only)
 
-## REQUIREMENTS
+## Project
 >myRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps. 
 >
 >The goal for this exercise is to create an end-to-end Proof-of-Concept for a products API, which will aggregate product data from multiple sources and return it as JSON to the caller. 
@@ -18,4 +18,30 @@ Case Study myRetail for target job opportunity
 >
 >BONUS: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store. 
 
-## Build Instructions
+## Requirements
+mongodb: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make sure to install mongoDB compass)
+path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
+netbeans: https://netbeans.org/downloads/
+postman: https://www.getpostman.com/
+
+## Build and Run Instructions
+Setup Server
+- choose a folder to save the database data, it can be anywhere
+- In command prompt navigate to MongoDB/Server/3.6/bin
+- run mongod.exe --dbpath "path to your database"
+- you should now see waiting for connections on port 27017
+- Launch mongoDB compass
+- In compass create the first database: productsDB with a collection named products
+- Create the following document 
+    _id:13860428
+    currentPrice:Object
+        value:"19.98"
+    currencyCode:"USA"
+    _class:"com.ben.myretail.model.Product"
+- create the second database: productsTestDB with a collection named produts
+Setup Project
+- clone repository into folder of your choice
+- open project in IDE of your choice
+- build project - in netbeans the tests will run at this point and should be successfull
+- run the project
+- run a GET in postman on the URL http://localhost:8080/products/13860428
