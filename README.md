@@ -29,14 +29,13 @@ Setup Server
 - choose a folder to save the database data, it can be anywhere
 - In command prompt navigate to MongoDB/Server/3.6/bin
 - run mongod.exe --dbpath "path to your database"
-- you should now see waiting for connections on port 27017
 - Launch mongoDB compass
 - In compass create the first database: productsDB with a collection named products
 - Create the following document 
     _id:13860428
     currentPrice:Object
         value:"19.98"
-    currencyCode:"USA"
+        currencyCode:"USA"
     _class:"com.ben.myretail.model.Product"
 - create the second database: productsTestDB with a collection named produts
 Setup Project
@@ -44,4 +43,3 @@ Setup Project
 - open project in IDE of your choice
 - build project - in netbeans the tests will run at this point and should be successfull
 - run the project
-- run a GET in postman on the URL http://localhost:8080/products/13860428
