@@ -21,13 +21,16 @@ Case Study myRetail for target job opportunity (tested on windows only)
 ## Requirements
 Maven
 mongodb: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make sure to install mongoDB compass)
+
 windows path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
 
 ## Build and Run Instructions
 Setup/Run Server
 - We need two databases. One for testing and one for production.
-- In MongoDB Compass create the first database named: productsDB with a collection named products
-- Create the following document 
+
+In MongoDB Compass:
+ - Create the first database named "productsDB" with a collection named "products"
+ - Create the following document 
  ```
  1 _id:13860428                                      Int32
  2 currentPrice:Object                               Object
@@ -35,7 +38,7 @@ Setup/Run Server
  4     currencyCode:"USA"                            String
  5 _class:"com.ben.myretail.model.Product"           String
 ```
-- create the second database named: productsTestDB and with a collection named produts
+ - Create the second database named "productsTestDB" and with a collection named "products"
 
 Setup/Run Project
 - clone repo into your favorite folder --> open in favorite IDE that has Maven support --> clean & build --> run
