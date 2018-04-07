@@ -19,10 +19,9 @@ Case Study myRetail for target job opportunity (tested on windows only)
 >BONUS: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store. 
 
 ## Requirements
+Maven
 mongodb: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make sure to install mongoDB compass)
-path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
-netbeans: https://netbeans.org/downloads/
-postman: https://www.getpostman.com/
+windows path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
 
 ## Build and Run Instructions
 Setup Server
@@ -32,12 +31,15 @@ Setup Server
 - Launch mongoDB compass
 - In compass create the first database: productsDB with a collection named products
 - Create the following document 
-    _id:13860428
-    currentPrice:Object
-        value:"19.98"
-        currencyCode:"USA"
-    _class:"com.ben.myretail.model.Product"
+ ```
+ 1 _id:13860428                                      Int32
+ 2 currentPrice:Object                               Object
+ 3     value:"19.98"                                 String
+ 4     currencyCode:"USA"                            String
+ 5 _class:"com.ben.myretail.model.Product"           String
+```
 - create the second database: productsTestDB with a collection named produts
+
 Setup Project
 - clone repository into folder of your choice
 - open project in IDE of your choice
