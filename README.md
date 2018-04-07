@@ -24,12 +24,9 @@ mongodb: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make su
 windows path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
 
 ## Build and Run Instructions
-Setup Server
-- choose a folder to save the database data, it can be anywhere
-- In command prompt navigate to MongoDB/Server/3.6/bin
-- run mongod.exe --dbpath "path to your database"
-- Launch mongoDB compass
-- In compass create the first database: productsDB with a collection named products
+Setup/Run Server
+- We need two databases. One for testing and one for production.
+- In MongoDB Compass create the first database named: productsDB with a collection named products
 - Create the following document 
  ```
  1 _id:13860428                                      Int32
@@ -38,10 +35,7 @@ Setup Server
  4     currencyCode:"USA"                            String
  5 _class:"com.ben.myretail.model.Product"           String
 ```
-- create the second database: productsTestDB with a collection named produts
+- create the second database named: productsTestDB and with a collection named produts
 
-Setup Project
-- clone repository into folder of your choice
-- open project in IDE of your choice
-- build project - in netbeans the tests will run at this point and should be successfull
-- run the project
+Setup/Run Project
+- clone repo into your favorite folder --> open in favorite IDE that has Maven support --> clean & build --> run
