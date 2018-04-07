@@ -1,6 +1,9 @@
 # myRetail
 Case Study myRetail for target job opportunity (tested on windows only)
 
+## Tech
+Netbeans, Maven, Java 8, Spring, Spring Boot, MongoDB, MongoDB Compass
+
 ## Project
 >myRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps. 
 >
@@ -20,7 +23,8 @@ Case Study myRetail for target job opportunity (tested on windows only)
 
 ## Requirements
 Maven
-mongodb: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make sure to install mongoDB compass)
+
+MongoDB: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make sure to install mongoDB compass)
 
 windows path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
 
