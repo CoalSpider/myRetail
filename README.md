@@ -24,9 +24,11 @@ Netbeans, Maven, Java 8, Spring, Spring Boot, MongoDB, MongoDB Compass
 ## Requirements
 Maven
 
-MongoDB: https://docs.mongodb.com/tutorials/install-mongodb-on-windows/ (make sure to install mongoDB compass)
+MongoDB: https://www.mongodb.com/download-center#community
 
-windows path variables: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
+MongoDB Compass: https://www.mongodb.com/download-center#compass 
+
+Windows: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
 
 ## Build and Run Instructions
 Setup/Run Server
@@ -34,7 +36,7 @@ Setup/Run Server
 
 In MongoDB Compass:
  - Create the first database named "productsDB" with a collection named "products"
- - Create the following document 
+ - Create the following document, leave capped collection unchecked.
  ```
  1 _id:13860428                                      Int32
  2 currentPrice:Object                               Object
@@ -45,4 +47,4 @@ In MongoDB Compass:
  - Create the second database named "productsTestDB" and with a collection named "products"
 
 Setup/Run Project
-- clone repo into your favorite folder --> open in favorite IDE that has Maven support --> clean & build --> run
+- clone this project into your favorite folder --> open in favorite IDE that has Maven support --> clean & build --> run
