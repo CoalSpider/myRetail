@@ -47,4 +47,4 @@ In MongoDB Compass:
  - Create the second database named "productsTestDB" and with a collection named "products"
 
 Setup/Run Project
-- clone this project into your favorite folder --> open in favorite IDE that has Maven support --> clean & build --> run
+- clone/download this repository into your favorite folder --> open in favorite IDE that has Maven support --> clean & build --> run
