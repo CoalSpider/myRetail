@@ -32,18 +32,22 @@ public class ProductController {
 
     @GetMapping(value = "/products/{id}")
     public Product getProduct(@PathVariable Integer id) throws ProductNotFoundException {
+        // get the title from redsky
         String title = redskyRepository.getProductTitleById(id);
-
+        if(title==null){
+            throw new ProductNotFoundException("could not find product: title");
+        }
+        // get the pricing data from mongo
         Product dbData = productRepository.findById(id).orElse(null);
         if (dbData == null) {
-            throw new ProductNotFoundException("could not find product");
+            throw new ProductNotFoundException("could not find product: pricing");
         }
-
+        // compose product for response
         return new Product(id, title, dbData.getCurrentPrice());
     }
 
     @PutMapping(value = "/products/{id}")
-    public Product updateProduct(@PathVariable Integer id, @RequestBody Product product) throws UpdateIntegrityException {
+    public Product updateProductPricing(@PathVariable Integer id, @RequestBody Product product) throws UpdateIntegrityException {
         if (id != product.getId()) {
             throw new UpdateIntegrityException("IDs are mismatched");
         }
