@@ -24,7 +24,7 @@ public class RedskyRepository {
     
     private static final String REDSKY_URL_PRE_PRODUCT_ID = "https://redsky.target.com/v2/pdp/tcin/";
     // what to exclude from JSON response
-    private static final String REDSKY_URL_PROST_PRODUCT_ID = "?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews,rating_and_review_statistics,question_answer_statistics";
+    private static final String REDSKY_URL_POST_PRODUCT_ID = "?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews,rating_and_review_statistics,question_answer_statistics";
 
     /**
      * @param id the products id
@@ -39,7 +39,7 @@ public class RedskyRepository {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        String productUrl = REDSKY_URL_PRE_PRODUCT_ID + id + REDSKY_URL_PROST_PRODUCT_ID;
+        String productUrl = REDSKY_URL_PRE_PRODUCT_ID + id + REDSKY_URL_POST_PRODUCT_ID;
 
         try {
             // http get from redsky

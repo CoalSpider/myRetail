@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ControllerExceptionHandler {
 
     /**
-     * Used to check if a product is found in a database, response with HttpsStatus.NOT_FOUND
+     * Used to check if a product is found in a database
      * @param e the exception to process
      * @return the error message from the exception
      */
@@ -34,7 +34,7 @@ public class ControllerExceptionHandler {
     }
 
     /**
-     * Used to check that updates ID's match, responds with HttpStatus.UNPROCESSABLE_ENTITY
+     * Used to check that updates ID's match
      * @param e the exception to deal with
      * @return the error message from the exception
      */
